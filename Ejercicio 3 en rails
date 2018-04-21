@@ -1,0 +1,23 @@
+rails new colegio
+
+rails g model course name:string
+
+rails g model student name:string course:references
+
+rails g model subject name:string teacher:references
+
+rails g model teacher name:string contract:references
+
+rails g model contract body:text teacher:references
+
+rails g model classroom name 
+
+rails g migration CreateCoursesSubjectsJoinTable
+
+rails g migration CreateClassromsSubjectsJoinTable
+
+rails db:migrate
+
+
+
+
